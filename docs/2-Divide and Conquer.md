@@ -74,10 +74,14 @@ Reduce 8 multiplications to 7. Increase 4 additions to 18.
 ![[Pasted image 20230118102027.png]]
 #### Complexity
 
-$$T(n) = 7T(n/2) + 18 O(n2) = 7(log n) + O(n2 log n)$$
-$$\implies 2^{2.81 log\ n} + O(n^2 log n)$$
-$$\implies T(n) \in O(n2.81)$$
-####Q. How good does it get? 
+$$
+\begin{align*}
+T(n) &= 7T(n/2) + 18 O(n2) = 7(log n) + O(n2 log n)\\
+&\implies 2^{2.81 log\ n} + O(n^2 log n)\\
+&\implies T(n) \in O(n2.81)\\
+\end{align*}
+$$
+#### Q. How good does it get? 
 
 A. Best known algorithms:
 - O(2.521813)(12/1979) 

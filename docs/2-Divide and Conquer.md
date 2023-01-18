@@ -48,6 +48,7 @@ For example, wanting to find the closest pair of points in an XY plane.
 The brute force solution is $O(n^2)$ when comparing every single point with every other point.
 
 ### D&C
+
 - Draw a line to separate the points, and compare closest points in each half.
 - Combine by comparing every point from one side with the other
 - Return the closest of the three sets of points
@@ -56,8 +57,10 @@ The brute force solution is $O(n^2)$ when comparing every single point with ever
 ![[Pasted image 20230118095931.png]]
 
 **You only need to check the 11 points below your starting point within the white lines.**
-	- This means that the number of points youre checking is constant.
-	- There is no way you can have one point per box, because they must be $\delta$ apart and each box is size $\delta/2$ by $\delta/2$
+
+- This means that the number of points youre checking is constant.
+- There is no way you can have one point per box, because they must be $\delta$ apart and each box is size $\delta/2$ by $\delta/2$
+
 ![[Pasted image 20230118100123.png]]
 
 ### Time Complexity
@@ -81,9 +84,10 @@ T(n) &= 7T(n/2) + 18 O(n2) = 7(log n) + O(n2 log n)\\
 &\implies T(n) \in O(n2.81)\\
 \end{align*}
 $$
-#### Q. How good does it get? 
 
+#### Q. How good does it get? 
 A. Best known algorithms:
+
 - O(2.521813)(12/1979) 
 - O(2.521801)(01/1980) 
 - O(2.376)(1987).

@@ -14,9 +14,11 @@ Let $opt = ((x,v), d_{opt}(v))$ be the edge containing $v$ with path distance $d
 The optimal path may choose a different edge for the ith edge on the path to $v$, or a path directly to $v$.
 
 #### Directly to $v$
+
 - The greedy algo will always choose the shortest path, but because it can't be shorter than the optimal solution (because its optimal) then they must be equal. This means we can do a swap and make the optimal solution more similar to the greedy one
 
 #### Opt traverses more than a single edge to v
+
 - Because the greedy algo will always choose the shortest path, then optimal cannot have more edges than the greedy algo
 
 ![[Pasted image 20230118132335.png]]
@@ -27,16 +29,19 @@ This example is done where the greedy algo had a direct path to v from some ith 
 Need to schedule $n$ jobs to minimize how late jobs finish overall in the schedule
 
 Ideas:
+
 - Could do all the short jobs first?
 	- Won't work because it ignores the deadlines for each job
 - Sort by increasing slack time (how much time there is between deadline and time required after start of schedule)
 
 ### Optimal solution:
+
 -   Will have no idle time (why have time in the schedule where nothing is being done?)
 -   No inversion (doing a task with a later deadline before a task with a earlier deadline)
 	-   If there is an inversion, there must be two consecutive jobs that are inverted.
 
 #### Proof idea: (Exchange argument)
+
 - Claim: All schedules with **no inversion** and **no idle time** have the same maximal lateness
 - If there is an optimal soln with an inversion, you can swap the inversion and show the maximal lateness does not change. Any jobs before and after the two inverted items will not be affected as the time block will be the same.
 		- By flipping the inversion, we may have reduced the lateness of these two jobs, but the maximal lateness may have been caused by a different job, which means the maximal lateness doesn’t change.

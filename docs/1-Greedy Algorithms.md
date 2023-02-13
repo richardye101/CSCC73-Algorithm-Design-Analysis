@@ -1,5 +1,12 @@
-```toc style: bullet | number | inline (default: bullet) min_depth: number (default: 2) max_depth: number (default: 6) title: string (default: undefined) allow_inconsistent_headings: boolean (default: false) delimiter: string (default: |) varied_style: boolean (default: false)
-```
+- [[#Djikstra's algorithm|Djikstra's algorithm]]
+	- [[#Djikstra's algorithm#Exchange argument proof|Exchange argument proof]]
+		- [[#Exchange argument proof#Directly to $v$|Directly to $v$]]
+		- [[#Exchange argument proof#Opt traverses more than a single edge to v|Opt traverses more than a single edge to v]]
+- [[#Minimum lateness Problems|Minimum lateness Problems]]
+	- [[#Minimum lateness Problems#Optimal solution:|Optimal solution:]]
+		- [[#Optimal solution:#Proof idea: (Exchange argument)|Proof idea: (Exchange argument)]]
+- [[#Data Compression|Data Compression]]
+
 
 ## Djikstra's algorithm
 
@@ -24,7 +31,7 @@ The optimal path may choose a different edge for the ith edge on the path to $v$
 
 - Because the greedy algo will always choose the shortest path, then optimal cannot have more edges than the greedy algo
 
-![[Pasted image 20230118132335.png]]
+![[Obsidian-Attachments/Pasted image 20230118132335.png]]
 This example is done where the greedy algo had a direct path to v from some ith state
 
 ## Minimum lateness Problems
@@ -49,15 +56,15 @@ Ideas:
 - If there is an optimal soln with an inversion, you can swap the inversion and show the maximal lateness does not change. Any jobs before and after the two inverted items will not be affected as the time block will be the same.
 		- By flipping the inversion, we may have reduced the lateness of these two jobs, but the maximal lateness may have been caused by a different job, which means the maximal lateness doesn’t change.
 
-![[Pasted image 20230118132655.png]]
+![[Obsidian-Attachments/Pasted image 20230118132655.png]]
 
-![[Pasted image 20230118132703.png]]
+![[Obsidian-Attachments/Pasted image 20230118132703.png]]
 
-![[Pasted image 20230118132708.png]]
+![[Obsidian-Attachments/Pasted image 20230118132708.png]]
 
 ## Data Compression
-![[Pasted image 20230118132723.png]]
+![[Obsidian-Attachments/Pasted image 20230118132723.png]]
 
-![[Pasted image 20230118132805.png]]
-![[Pasted image 20230118132945.png]]
-![[Pasted image 20230118132950.png]]
+![[Obsidian-Attachments/Pasted image 20230118132805.png]]
+![[Obsidian-Attachments/Pasted image 20230118132945.png]]
+![[Obsidian-Attachments/Pasted image 20230118132950.png]]

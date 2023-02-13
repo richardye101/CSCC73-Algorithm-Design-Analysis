@@ -1,4 +1,3 @@
-# Bellman-Ford
 An algorithm that works on graphs with negative weights. 
 
 From Djikstra's, we could possibly add a constant to all edges to make them all positive. However, if the shortest path (by weight) uses many edges, then the weight would have been increased for the entire path.
@@ -86,5 +85,3 @@ The version two of the proof for the **forward direction**
 
 **Reverse/Backward Direction of the IFF**
 ![[Obsidian-Attachments/5-Bellman-Ford Algorithm-3.png]]
-
-
